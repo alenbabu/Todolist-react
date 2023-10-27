@@ -1,40 +1,47 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  body {
-    background-color: #0e0441;
-  }
+}
 
-  #main-heading{
+body {
+    background-color: #0e0441;
+}
+
+#main-heading {
     font-size: 3em;
-  }
-  
-  .main-body{
+    background: #00FF00;
+    background: -webkit-linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    background: -moz-linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-body {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-  }
+}
 
-  h1,h2{
+h1,
+h2 {
     color: white;
     text-align: center;
     margin-top: 3px;
-  }
+}
 
-  .app{
+.app {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 30%;
     flex-direction: column;
-  }
+}
 
-  .input{
+.input {
     margin-top: 0.8em;
     display: flex;
     justify-content: center;
@@ -45,34 +52,38 @@
     display: flex;
     border-radius: 6px;
     padding: 5px;
-  }
+}
 
-  .input input {
+.input input {
     width: 100%;
     height: 1.6em;
     border-color: transparent;
     outline-color: transparent;
-  }
+}
 
-  .task{
+.task {
     width: 100%;
     height: 60vh;
     font-size: small;
     border: 1px solid chartreuse;
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .sub-task {
-    width: 30%;
+.sub-task {
+    width: 45%;
     height: 50vh;
     border: 1px solid cyan;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .todo{
+.task-heading {
+    text-decoration: underline;
+}
+
+.todo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,16 +94,20 @@
     display: flex;
     border-radius: 6px;
     padding: 5px;
-  }
+}
 
-  .todo-list{
+p{
+    color: rgb(76, 74, 74);
+    font-weight: bold;
+    font-size: larger;
+}
+
+.todo-list {
     margin-right: .5em;
     background-color: white;
-  }
+}
 
-  .left{
+.left {
     display: flex;
     flex-direction: row;
-  }
-
-
+}
