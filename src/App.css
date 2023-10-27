@@ -4,7 +4,11 @@
   }
   
   body {
-    background-color: #ebe5e1;
+    background-color: #0e0441;
+  }
+
+  #main-heading{
+    font-size: 3em;
   }
   
   .main-body{
@@ -16,6 +20,7 @@
   }
 
   h1,h2{
+    color: white;
     text-align: center;
     margin-top: 3px;
   }
@@ -58,7 +63,7 @@
     justify-content: space-between;
   }
 
-  .active-task {
+  .sub-task {
     width: 30%;
     height: 50vh;
     border: 1px solid cyan;
@@ -78,6 +83,11 @@
     display: flex;
     border-radius: 6px;
     padding: 5px;
+  }
+
+  .todo-list{
+    margin-right: .5em;
+    background-color: white;
   }
 
   .left{

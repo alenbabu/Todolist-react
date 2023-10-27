@@ -9,34 +9,40 @@ function App() {
     <div className="main-body">
       <div className="app">
         <div className="heading">
-          <h1>Todo List </h1>
+          <h1 id="main-heading">Todo List </h1>
           <h2>Note your todo Now!!</h2>
 
         </div>
         <div className="input">
-          <input type="text" placeholder="🖊️ Add item..." />
-          <i className="fas fa-plus"></i>
+          <input value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder="🖊️ Add item..." />
+          <i onClick={() => setTodos([...todos, text])} className="fas fa-plus"></i>
         </div>
       </div>
       <div className="task">
-        <div className="active-task">
-          <h1>ACTIVE TASK</h1>
-          <div className="todo">
-            <div className="left">
-              <input type="checkbox" name="" id="" />
-              <p>heloooooooo</p>
-            </div>
-            <div className="right">
-              <i className="fas fa-times"></i>
-            </div>
-          </div>
-        </div>
-        <div className="done-task">
-          <h1>DONE TASK</h1>
+        <div className="sub-task">
+          <h1>ACTIVE</h1>
+          {todos.map((value) =>{
+            return (
+              <div className="todo">
+                <div className="left">
+                  <input className="todo-list" type="checkbox" name="" id="" />
+                  <p>{value}</p>
+                </div>
+                <div className="right">
+                  <i className="fas fa-times"></i>
+                </div>
+              </div>
+            )
+          })}
 
         </div>
-        <div className="deleted-task">
-          <h1>DELETED TASK</h1>
+        <div className="sub-task">
+          <h1>DONE</h1>
+
+
+        </div>
+        <div className="sub-task">
+          <h1>DELETED</h1>
 
         </div>
       </div>
