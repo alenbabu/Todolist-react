@@ -25,7 +25,7 @@ function App() {
       </div>
       <div className="task">
         <div className="sub-task">
-          <h1>ACTIVE</h1>
+          <h1>ACTIVE TASK</h1>
           {todos.map((obj) => {
             if(!obj.status){
               return (
@@ -55,7 +55,7 @@ function App() {
 
         </div>
         <div className="sub-task">
-          <h1>DONE</h1>
+          <h1>DONE TASK</h1>
           {todos.map((obj) => {
             if(obj.status){
               return (
