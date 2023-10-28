@@ -25,7 +25,7 @@ function App() {
       </div>
       <div className="task">
         <div className="sub-task">
-          <h1 className="task-heading">ACTIVE</h1>
+          <h1>ACTIVE</h1>
           {todos.map((obj) => {
             if(!obj.status){
               return (
@@ -40,7 +40,7 @@ function App() {
                       return obj2
                     }))
                   }}value={obj.status} className="todo-list" type="checkbox" name="" id="" />
-                  <p>{obj.string}</p>
+                  <p style={{color:'grey'}}>{obj.string}</p>
                 </div>
                 <div className="right">
                   <i onClick={()=>onDelete(obj.id)} className="fas fa-times"></i>
@@ -55,16 +55,16 @@ function App() {
 
         </div>
         <div className="sub-task">
-          <h1 className="task-heading">DONE</h1>
+          <h1>DONE</h1>
           {todos.map((obj) => {
             if(obj.status){
               return (
                 <div className="todo">
                 <div className="left">
-                  <p className="done-paragraph">{obj.string}</p>
+                  <p style={{textDecoration:'line-through',color:'grey'}}>{obj.string}</p>
                 </div>
                 <div className="right">
-                  <i className="fas fa-times"></i>
+                  <i onClick={()=>onDelete(obj.id)} className="fas fa-times"></i>
                 </div>
               </div> 
             )
