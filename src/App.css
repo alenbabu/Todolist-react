@@ -111,3 +111,7 @@ p{
     display: flex;
     flex-direction: row;
 }
+
+.done-paragraph{
+    text-decoration: line-through;
+}
